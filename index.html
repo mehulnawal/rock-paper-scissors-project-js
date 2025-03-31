@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <!-- Bootstrap css cdn -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome Pro -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+
+    <!-- main css link -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="page1">
+        <div class="container-fluid">
+            <div class="page1-title d-flex justify-content-between align-items-center">
+                <h4>Rock Paper Scissors</h4>
+
+                <div class="pag1-right d-flex gap-2">
+                    <span class="message">Click to change theme</span>
+                    <div id="lightToggle">
+                        <div id="toggleBall"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pag1-body shadow-lg">
+                <h2>Rock Paper Scissors</h2>
+                <button id="nextPagBtn">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- page 2 srt -->
+    <div id="page2" class="shadow">
+        <div class="pag2-body shadow-lg">
+            <p id="first-child">Game Setup</p>
+            <p id="second-child">Select Game type: </p>
+
+            <div id="noOfTime">
+                <button type="button" id="bestOf3" class="active border-0">Best Of 3</button>
+                <button type="button" id="bestOf5" class=" border-0">Best Of 5</button>
+            </div>
+
+            <p class="mt-3 fs-5">Game of : <span id="detail">3</span> Rounds </p>
+
+            <button type="button" id="srtGame" class=" border-0">Start Game</button>
+        </div>
+    </div>
+    <!-- page 2 end -->
+
+    <!-- page 3 srt -->
+    <div id="page3Main">
+        <div class="d-flex justify-content-center gap-4 align-items-center">
+            <div id="yourChoice" class="d-flex justify-content-center gap-2 align-items-center flex-column">
+                <div class="fw-bold fs-5" id="yourChoiceIcon">?</div>
+                <span>Your</span>
+            </div>
+
+            <div id="yourChoice" class="d-flex justify-content-center gap-2 align-items-center flex-column">
+                <div class="fs-5 fw-bold" id="computerChoice">?</div>
+                <span>Computer</span>
+            </div>
+        </div>
+
+        <p id="winnerDisplay">Choose rock, paper, scissors to start</p>
+
+        <button id="backToMenu" type="button" class="btn w-100">Back to menu</button>
+    </div>
+
+    <div id="page3" class="shadow">
+        <div>
+            <div class="row">
+                <div class="col-6">
+                    <div id="score">
+                        <h5 class="title">Score</h5>
+                        Your: <span id="scoreYour"> 0</span>
+                        <br />
+                        Computer: <span id="scoreComputer"> 0</span>
+                        <p id="winnerDisplayMessage"></p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div id="roundInfo">
+                        <h5 class="title">Info</h5>
+                        Round : <span id="roundInfo1"> 0 </span> of <span id="roundInfo2">3</span>
+                        <button class="btn border-0 bg-secondary mt-3 text-white" type="button" id="restartBtn">Restart
+                            the
+                            game</button>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div id="displayOptions" class="mt-3">
+                        <div class="title">Make Your Choice</div>
+
+                        <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
+                            <div id="" class="options rock">
+                                <span class="icon fs-3" id="rockIcon">✊</span>
+                                <span>Rock</span>
+                            </div>
+
+                            <div id="" class="options paper">
+                                <span class="icon fs-3" id="paperIcon">✋</span>
+                                <span>Paper</span>
+                            </div>
+
+                            <div id="" class="options scissors">
+                                <span class="icon fs-3" id="scissorsIcon">✌️</span>
+                                <span>Scissors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page 3 end -->
+
+    <!-- main js link -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

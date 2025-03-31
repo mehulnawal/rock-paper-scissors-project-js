@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;
+}
+
+.page1-title {
+    h4 {
+        font-weight: 700;
+    }
+
+    .pag1-right {
+        .message {
+            display: none;
+        }
+
+        #lightToggle {
+            height: 28px;
+            width: 55px;
+            border-radius: 20px;
+            border: 1px solid #CCCCCC;
+            background-color: #CCCCCC;
+            cursor: pointer;
+            padding: 1.5px 1px;
+
+            #toggleBall {
+                background-color: #fff;
+                border-radius: 50%;
+                height: 90%;
+                width: 23px;
+                /* margin-top: 1px; */
+                /* margin-left: 1px; */
+            }
+        }
+    }
+}
+
+/* page1 */
+#page1 {
+    margin-top: 20px;
+
+    .pag1-body {
+        background-color: #fff;
+        border: 1px solid #000;
+        width: 60%;
+        height: 100%;
+        margin: 10% auto;
+        border-radius: 8px;
+        padding: 20px 20px;
+        transition: all 0.3s ease-in-out;
+
+        h2 {
+            text-align: center;
+            color: #3498DB;
+            font-weight: 700;
+        }
+
+        #nextPagBtn {
+            background-color: #3498DB;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 30px;
+            width: 100%;
+            margin: 20px 0px;
+            font-size: 20px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #nextPagBtn:hover {
+            background-color: #1da556;
+            margin-top: 18.5px;
+        }
+    }
+}
+
+/* page 2 : game type */
+#page2 {
+    display: none;
+    background-color: #fff;
+    width: 60%;
+    height: 100%;
+    border-radius: 12px;
+    margin: 10% auto;
+
+    .pag2-body {
+        border: 1px solid #000;
+        padding: 20px 20px;
+        text-align: center;
+
+        #first-child {
+            font-weight: 700;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        #second-child {
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        #noOfTime {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            button {
+                border: none;
+                background-color: #3498DB;
+                color: #fff;
+                border-radius: 5px;
+                padding: 5px 7px;
+                font-size: 15px;
+            }
+
+            .active {
+                background-color: #1da556;
+            }
+        }
+
+        #srtGame {
+            /* width: fit-content !important; */
+            margin: 10px auto;
+            border: none;
+            padding: 5px 10px;
+            background-color: #E74C3C;
+            color: #fff;
+            border-radius: 7px;
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+/* page 3 : main game - 3 rounds */
+#page3,
+#page3Main {
+    display: none;
+    background-color: #fff;
+    width: 60%;
+    height: 100%;
+    border-radius: 12px;
+    margin: 2% auto;
+    border: 1px solid #000;
+    padding: 20px 20px;
+    /* text-align: center; */
+
+    #score,
+    #roundInfo {
+        .title {
+            color: #3498DB;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+
+    #restartBtn {
+        display: none;
+    }
+
+    #displayOptions {
+        margin-top: 20px;
+
+        .title {
+            color: #3498DB;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-left: 25px;
+            padding: 5px 20px;
+            border-radius: 10px;
+            /* transition: all 0.2s ease-in-out; */
+            cursor: pointer;
+
+            span {
+                font-size: 20px;
+            }
+
+            .icon {
+                font-size: 25px;
+            }
+        }
+
+        .options:hover {
+            background-color: #E5E7EB;
+            transform: scale(1.06);
+        }
+    }
+}
+
+#page3Main {
+    margin: 10px auto !important;
+
+    #icon {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+
+    button {
+        background-color: #CCCCCC;
+        font-weight: 600;
+        color: #000;
+    }
+}
+
+#winnerDisplayMessage {
+    display: none;
+}
