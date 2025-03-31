@@ -221,3 +221,29 @@ body {
 #winnerDisplayMessage {
     display: none;
 }
+
+@media (max-width: 576px) {
+    .pag1-body {
+        width: 95% !important;
+        height: 100% !important;
+        margin: 50% auto !important;
+    }
+
+    #page2 {
+        width: 95%;
+        height: 100%;
+        margin: 35% auto !important;
+    }
+
+    #page3,
+    #page3Main {
+        width: 95% !important;
+        margin-top: 10% !important;
+    }
+
+    .options {
+        gap: 0px !important;
+        margin-left: 5px !important;
+        padding: 5px 10px !important;
+    }
+}
