@@ -87,6 +87,9 @@ bestOf5.addEventListener("click", function () {
 
 
 srtGame.addEventListener("click", function () {
+    let gameSrt = document.getElementById("gameSrtSound");
+    gameSrt.volume = 1;
+    gameSrt.play()
     page2.style.display = "none";
     page3.style.display = "block";
     page3Main.style.display = "block";
@@ -98,6 +101,20 @@ backToMenu.addEventListener("click", function () {
     pag1Body.style.display = "block";
     page3.style.display = "none";
     page3Main.style.display = "none";
+    roundInfo1.innerText = 0;
+    yourChoiceIcon.innerHTML = `<span class="fs-5">?</span>`;
+    computerChoice.innerHTML = `<span class="fs-5">?</span>`;
+    scoreYour.innerText = "0";
+    scoreComputer.innerText = "0";
+    restartBtn.style.display = "none";
+    count = 0;
+    roundInfo1.innerText = 0;
+    winnerDisplayMessage.style.display = "none";
+    winnerDisplayMessage.innerText = "";
+    for (let i = 0; i < options.length; i++) {
+        options[i].style.cursor = "pointer";
+        options[i].style.pointerEvents = "auto";
+    }
 });
 
 // users options to select between - rock, paper, scissors;
@@ -200,10 +217,16 @@ for (let i = 0; i < options.length; i++) {
             if (scoreYour.innerText > scoreComputer.innerText) {
                 winnerDisplayMessage.style.display = "block";
                 winnerDisplayMessage.innerHTML = '<span class="fs-4 mt-4 text-success">You win this round 🎉</span>';
+                let sound = document.getElementById("gameWin");
+                sound.volume = 1;
+                sound.play();
             }
             else {
                 winnerDisplayMessage.style.display = "block";
                 winnerDisplayMessage.innerHTML = '<span class="fs-4 mt-4 text-danger">You loose this round 😢</span>';
+                let lose = document.getElementById("gameLose");
+                lose.volume = 1;
+                lose.play();
             };
         };
     });
